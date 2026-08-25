@@ -1,0 +1,24 @@
+if(hands[i].getRank() > h1.getRank()){
+  h1 = hands[i];
+  index = i;
+}
+else if(hands[i].getRank() >= h1.getRank()){
+  if(hands[i].getMaxPairedCard()>h1.getMaxPairedCard()){
+    h1 = hands[i];
+    index = i;
+  }
+  else if(hands[i].getMaxPairedCard()<h1.getMaxPairedCard()){
+  }
+  else{
+    if(hands[i].getMax() > h1.getMax()){
+    h1 = hands[i];
+    index = i;
+    }
+    else if(hands[i].getMax() == h1.getMax()){
+    unbeaten[index] = true;
+    unbeaten[i] = true;
+    }
+  }
+}
+}
+unbeaten[index] = true;
